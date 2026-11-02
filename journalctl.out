@@ -1,0 +1,10 @@
+ноя 02 02:03:19 mephi-2026.domain.local systemd[1]: Starting nginx.service - The nginx HTTP and reverse proxy server...
+ноя 02 02:03:19 mephi-2026.domain.local nginx[1075]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+ноя 02 02:03:19 mephi-2026.domain.local nginx[1075]: nginx: configuration file /etc/nginx/nginx.conf test is successful
+ноя 02 02:03:19 mephi-2026.domain.local systemd[1]: Started nginx.service - The nginx HTTP and reverse proxy server.
+ноя 02 02:41:32 mephi-2026.domain.local systemd[1]: Reloading nginx.service - The nginx HTTP and reverse proxy server...
+ноя 02 02:41:32 mephi-2026.domain.local nginx[1689]: nginx: [emerg] invalid number of arguments in "root" directive in /etc/nginx/nginx.conf:42
+ноя 02 02:41:32 mephi-2026.domain.local systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+ноя 02 02:41:32 mephi-2026.domain.local systemd[1]: Reload failed for nginx.service - The nginx HTTP and reverse proxy server.
+ноя 02 02:42:54 mephi-2026.domain.local systemd[1]: Reloading nginx.service - The nginx HTTP and reverse proxy server...
+ноя 02 02:42:54 mephi-2026.domain.local systemd[1]: Reloaded nginx.service - The nginx HTTP and reverse proxy server.

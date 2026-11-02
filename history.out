@@ -1,0 +1,104 @@
+    1  lsblk
+    2  parted -s /dev/nvme0n2 mklabel gpt
+    3  parted -s /dev/nvme0n2 mkpart primary ext4 1MiB 100%
+    4  partprobe /dev/nvme0n2
+    5  udevadm settle
+    6  mkfs.ext4 -L MEPHI_WEB /dev/nvme0mn2p1
+    7  lsblk
+    8  mkfs.ext4 -L MEPHI_WEB /dev/nvme0n2p1
+    9  mkdir /mephi-web
+   10  mount LABEL=MEPHI_WEB /mephi-web/
+   11  systemctl enable --now nginx
+   12  systemctl is-active ngionx
+   13  systemctl is-active nginx
+   14  journalctf -u nginx.service -b --no-pager > results/journalctl.out
+   15  journalctl -u nginx.service -b --no-pager > results/journalctl.out
+   16  cat results/journalctl.out 
+   17  mkdir /data/mephi-2026
+   18  groupadd developers
+   19  groupadd curators
+   20  useradd -m -u 5501 -G developers -s /bin/bash user1
+   21  useradd -m -u 5501 -G developers -s /bin/bash user2
+   22  useradd -m -u 5502 -G developers -s /bin/bash user2
+   23  useradd -m -u 5503 -G developers -s /bin/bash user3
+   24  groupadd -g 4444 curators
+   25  groupmod -g 4444 curator
+   26  groupmod -g 4444 curators
+   27  useradd -m -g curators -s /bin/bash curator1
+   28  useradd -m -g curators -s /bin/bash curator2
+   29  chmod 755 /data
+   30  ls /
+   31  mkdir /data/mephi-2026
+   32  mkdir -p /data/mephi-2026
+   33  chmod 755 /data
+   34  chown root:developers /data/mephi-2026
+   35  chmod 2770 /data/mephi-2026/
+   36  setfacl -m u::rwx,g::rwx,g:curators:r-x,m::rwx,o::--- /data/mephi-2026/
+   37  setfacl -d -m u::rwx,g::rwx,g:curators:r-x,m::rwx,o::--- /data/
+   38  setfacl -d -m u::rwx,g::rwx,g:curators:r-x,m::rwx,o::--- /data/mephi-2026/
+   39  getfacl /data/mephi-2026/
+   40  sudo -u user1
+   41  sudo user 1
+   42  su user1
+   43  su user2
+   44  cd /data/mephi-2026/
+   45  su curator1
+   46  su nobody
+   47  su nik
+   48  tcpdump
+   49  setcap cap_net_raw,cap_net_admin=ep 
+   50  command -v tcpdump
+   51  setcap cap_net_raw,cap_net_admin=ep /sbin/tcpdump 
+   52  sudo -u user1 tcpdump 
+   53  su suer2
+   54  su user2
+   55  getenforce
+   56  sestatus
+   57  nano
+   58  nano /etc/nginx/nginx.conf
+   59  ls /etc/security/
+   60  nano /etc/security/mephi-local-access.conf
+   61  nano /etc/pam.d/login
+   62  nano /etc/login.defs
+   63  ls /etc/security/
+   64  nano /etc/security/pwquality.conf
+   65  cd /mephi-web/
+   66  echo "Hello from Student: M265877" > index.html
+   67  curl http://localhost/
+   68  systemctl reload nginx
+   69  sudo nginx -t
+   70  nano /etc/nginx/nginx.conf
+   71  sudo nginx -t
+   72  systemctl reload nginx
+   73  curl http://localhost/
+   74  ls
+   75  tail -n 20 /var/log/nginx/error.log
+   76  chmod 755 /mephi-web/
+   77  chmod 644 /mephi-web/index.html 
+   78  curl http://localhost/
+   79  ls -ldZ /mephi-web/
+   80  ls -ldZ /mephi-web/index.html 
+   81  semanage fcontext -a -t httpd_sys_content_t 'mephi-web(/.*)?'
+   82  dnf sintall -y policycoreutils-python-utils
+   83  dnf install -y policycoreutils-python-utils
+   84  semanage fcontext -a -t httpd_sys_content_t 'mephi-web(/.*)?'
+   85  restorecon -Rv /mephi-web/
+   86  curl http://localhost/
+   87  ls -ldZ /mephi-web/
+   88  ls -ldZ /mephi-web/index.html 
+   89  semanage fcontext -a -t httpd_sys_content_t 'mephi-web(/.*)?'
+   90  semanage fcontext -m -t httpd_sys_content_t 'mephi-web(/.*)?'S
+   91  semanage fcontext -m -t httpd_sys_content_t 'mephi-web(/.*)?'
+   92  ls -ldZ /mephi-web/index.html 
+   93  findmnt -T /mephi-web 
+   94  matchpathcon /mephi-web/ /mephi-web/index.html 
+   95  restorecon -RFv /mephi-web/
+   96  ls -ldZ /mephi-web/
+   97  ls -ldZ /mephi-web/index.html 
+   98  semanage fcontext -a -t httpd_sys_content_t '/mephi-web(/.*)?'
+   99  curl http://localhost/
+  100  restorecon -RFv /mephi-web/
+  101  curl http://localhost/
+  102  cd ~
+  103  pwd
+  104  history > history.out
